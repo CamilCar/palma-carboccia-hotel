@@ -20,4 +20,4 @@ from home.views import landing_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', landing_page, name='home')
-]
+    ]

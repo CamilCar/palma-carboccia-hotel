@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 def landing_page(request):
 
-    return render(request, "base.html")
+    return render(request, "home/index.html")
