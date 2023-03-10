@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home.views import landing_page
+from home.views import history_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', landing_page, name='home')
+    path('', landing_page, name='home'),
+    path('the_hotel', history_page, name='the_hotel')
     ]

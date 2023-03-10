@@ -5,4 +5,8 @@ from django.shortcuts import render
 
 def landing_page(request):
 
-    return render(request, "home/index.html")
+    return render(request, "nav_section/index.html")
+
+def history_page(request):
+
+    return render(request, "nav_section/the_hotel.html")
