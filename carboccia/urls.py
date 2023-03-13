@@ -17,14 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from home.views import landing_page, history_page, rooms_page, food_page, price_page
 from booking.views import booking_page
+from reservation.views import reservation_page
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', landing_page, name='home'),
     path('landing_page', landing_page, name='home'),
     path('the_hotel', history_page, name='the_hotel'),
     path('our_rooms', rooms_page, name='our_rooms'),
-    path('food_drink', food_page , name='menu'),
+    path('food_drink', food_page, name='menu'),
     path('prices', price_page, name='pricing'),
-    path('booking', booking_page, name='book_a_room')
+    path('booking', booking_page, name='book_a_room'),
+    path('reservation', reservation_page, name='reservation')
     ]
