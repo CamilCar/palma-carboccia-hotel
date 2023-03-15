@@ -25,18 +25,19 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="prices">Prices</a>
                 </li>
-                <a href="booking" class="booking_button" href="booking">
+            
+                {% if user.is_authenticated %}
+                <a class="booking_button" href="booking">
                     <button type="button" class="btn btn-secondary">Book Now</button>
                 </a>
-                {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    aria-expanded="false">
                         Logged in as
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="reservation">My Reservations</a></li>
-
+                        
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -44,8 +45,11 @@
                     </ul>
                 </li>
                 {% else %}
+                <a class="booking_button" href="{% url 'account_login' %}">
+                    <button type="button" class="btn btn-secondary">Book Now</button>
+                </a>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="accounts/signup">Login</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
             </ul>

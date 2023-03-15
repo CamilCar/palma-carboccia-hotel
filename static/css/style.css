@@ -28,8 +28,19 @@ h1 {
     padding-left: 10%;
 }
 
+.main-block {
+    padding: 3.7rem 3rem 0;
+}
 
+.carousel-inner {
+    max-width: 100%;
+    height: auto;
+    padding: 40px;
+}
 
+.w-100 {
+    width:auto;
+}
 @media screen and (min-width: 900px) {
     .navbar {
         --bs-navbar-nav-link-padding-x: 1.5rem;
