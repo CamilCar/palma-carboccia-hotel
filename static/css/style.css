@@ -1,6 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
-.title-welcome {
-    color: firebrick;
+
+.h-100 {
+    color: #e3dfda;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+}
+
+.main_hero_section {
+    
+    font-family: "Old Standard TT", serif;
+    font-size: 22.5px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    line-height: 24.75px;
+    text-transform: none;
+    color: #2A2A2A;
+    margin: 3%;
+}
+
+p {
+    font-family: Heebo, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: none;
+    color: #606060;
+    margin-right: 5%;
+}
+
+.navbar a {
+    color: #e3dfda;
+    font-family: Heebo, sans-serif;
 }
 
 .logo {
@@ -15,9 +47,11 @@
     background-position: center;
 }
 
+
 #landing_hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678449406/hero_1_mphfa4.jpg");
 }
+
 #the_hotel_hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678919431/hotel2_fgjnwy.jpg");
 }
@@ -33,19 +67,21 @@
 #prices_hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679058949/prices_4_ufma0s.jpg");
 }
+
 .main-block {
     height: 300px;
     margin-top: -4rem;
     width: 50%;
     border-radius: 0.25rem;
-    
+
 }
 
 body,
 .main-block {
 
-    background: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679059910/noisy_y7bmb5.png"),  #e3dfda;
+    background: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679059910/noisy_y7bmb5.png"), #e3dfda;
 }
+
 .row {
     padding-left: 10%;
 }
@@ -54,15 +90,6 @@ body,
     padding: 3.7rem 3rem 0;
 }
 
-.carousel-inner {
-    max-width: 100%;
-    height: auto;
-    padding: 40px;
-}
-
-.w-100 {
-    width:auto;
-}
 @media screen and (min-width: 900px) {
     .navbar {
         --bs-navbar-nav-link-padding-x: 1.5rem;
@@ -80,3 +107,4 @@ body,
         padding-left: 140px;
     }
 }
+

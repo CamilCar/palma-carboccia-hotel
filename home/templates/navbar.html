@@ -11,10 +11,11 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <div class="collapse navbar-collapse " id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="the_hotel">The Hotel</a>
+                    <a class="nav-link active" aria-current="page" href="the_hotel">The Hotel</a> 
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="our_rooms">Our Rooms</a>
@@ -56,3 +57,14 @@
         </div>
     </div>
 </nav>
+<script>
+
+    const navLinks = document.getElementsByClassName("nav-link")
+    if ( "{{render_dark_navbar}}"  ) {
+        for (link of navLinks) {
+            link.classList.add("text-secondary")
+        }
+    }
+
+    
+</script>

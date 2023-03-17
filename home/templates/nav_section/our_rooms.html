@@ -1,20 +1,15 @@
 {% extends "base.html" %}
 
 
-
-<div class="landing_img">
-        
-</div>
-
 {% block hero_img %}
 <div id="our_rooms_hero" class="images">
-  {% include "navbar.html" %}
-  
+    {% include "navbar.html" with render_dark_navbar=True %}
 </div>
 {% endblock %}
 
 
 {% block carusel %}
+<div class="carusel_size">
 <div id="carouselExampleFade" class="carousel slide carousel-fade">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -36,4 +31,5 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+
 {% endblock %}
