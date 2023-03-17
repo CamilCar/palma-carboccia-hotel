@@ -1,5 +1,6 @@
-h1 {
-    color: blue
+
+.title-welcome {
+    color: firebrick;
 }
 
 .logo {
@@ -7,23 +8,44 @@ h1 {
     height: 80px;
 }
 
-.landing_img {
+.images {
     width: 100%;
     height: 630px;
     background-size: cover;
     background-position: center;
-    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678449406/hero_1_mphfa4.jpg");
 }
 
+#landing_hero {
+    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678449406/hero_1_mphfa4.jpg");
+}
+#the_hotel_hero {
+    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678919431/hotel2_fgjnwy.jpg");
+}
+
+#our_rooms_hero {
+    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679056472/our.rooms_zomtbo.jpg");
+}
+
+#food_hero {
+    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679057058/menu_zyilj3.jpg");
+}
+
+#prices_hero {
+    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679058949/prices_4_ufma0s.jpg");
+}
 .main-block {
-    background-color: bisque;
     height: 300px;
     margin-top: -4rem;
     width: 50%;
     border-radius: 0.25rem;
-
+    
 }
 
+body,
+.main-block {
+
+    background: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679059910/noisy_y7bmb5.png"),  #e3dfda;
+}
 .row {
     padding-left: 10%;
 }
