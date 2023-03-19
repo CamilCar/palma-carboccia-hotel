@@ -17,3 +17,31 @@
     </div>
   </div>
 {% endblock %}
+
+{% block textsection %}
+  <div class="main_section">
+        <div class="row">
+            <div class="main-block">
+              <form method="post" action=".">
+                {% csrf_token %}
+                <div id="date-picker-wrapper">
+                  <div id="end-date-wrapper">
+                    <p>start date:</p>
+                    {{booking_form.start_date}}
+                  </div>
+                  <div id="end-date-wrapper">
+                    <p>end date:</p>
+                    {{booking_form.end_date}}
+                  </div>
+                </div>
+                <p>Adults:</p>
+                {{booking_form.amount_adults}}
+                <p>Kids:</p>
+                {{booking_form.amount_kids}}
+                <input type="submit" value="Next">
+              </form>
+           </div>
+        </div>
+    </div>
+  </div>
+    {% endblock %}

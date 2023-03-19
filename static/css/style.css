@@ -90,6 +90,11 @@ body,
     padding: 3.7rem 3rem 0;
 }
 
+#date-picker-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
 @media screen and (min-width: 900px) {
     .navbar {
         --bs-navbar-nav-link-padding-x: 1.5rem;

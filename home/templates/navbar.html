@@ -15,20 +15,20 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent" >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="the_hotel">The Hotel</a> 
+                <a class="nav-link active" aria-current="page" href="{% url 'the_hotel' %}">The Hotel</a> 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="our_rooms">Our Rooms</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'our_rooms' %}">Our Rooms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="food_drink">Food & Drink</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'food_drink' %}">Food & Drink</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="prices">Prices</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'prices' %}">Prices</a>
                 </li>
             
                 {% if user.is_authenticated %}
-                <a class="booking_button" href="booking">
+                <a class="booking_button" href="{% url 'book_a_room' %}">
                     <button type="button" class="btn btn-secondary">Book Now</button>
                 </a>
                 <li class="nav-item dropdown">
@@ -37,7 +37,7 @@
                         Logged in as
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="reservation">My Reservations</a></li>
+                        <li><a class="dropdown-item" href="{% url 'reservation' %}">My Reservations</a></li>
                         
                         <li>
                             <hr class="dropdown-divider">
