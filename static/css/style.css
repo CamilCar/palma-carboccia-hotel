@@ -46,6 +46,7 @@ p {
     height: 630px;
     background-size: cover;
     background-position: center;
+    float: right;
 }
 
 
@@ -91,6 +92,10 @@ body,
     background: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679059910/noisy_y7bmb5.png"), #e3dfda;
 }
 
+body {
+    margin: 0;
+  }
+
 .row {
     padding-left: 10%;
 }
@@ -102,6 +107,11 @@ body,
 #date-picker-wrapper {
     display: flex;
     justify-content: space-around;
+}
+
+#submit-btn {
+    text-align: center;
+    margin-top: 20px;
 }
 
 @media screen and (min-width: 900px) {

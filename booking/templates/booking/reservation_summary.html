@@ -22,19 +22,26 @@
               <input type="text" class="form-control" value="{{booking_form.start_date.value}} - {{booking_form.end_date.value}}" disabled>
             </div>
             <div class="col">
-              <input type="text" class="form-control" value="{{booking_form.total_price.value}}" disabled>
+              <input type="text" class="form-control" value="{{booking_form.amount_adults.value}} adults" disabled>
             </div>
             <div class="col">
-              {% comment %} <input type="text" class="form-control" placeholder="First name" aria-label="First name"> {% endcomment %}
+              <input type="text" class="form-control" value="{{booking_form.amount_kids.value}} children" disabled>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" value="€{{booking_form.total_price.value}}" disabled>
+            </div>
+          </div>
+          <div class="form-group row mt-4">
+            <div class="col">
               {{ booking_form.first_name }}
             </div>
             <div class="col">
-              {% comment %} <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"> {% endcomment %}
               {{ booking_form.last_name }}
             </div>
           </div>
-        <input type="submit" value="Confirm">
-
+          <div id="submit-btn">
+        <input class="btn btn-success btn-lg " type="submit" value="Confirm">
+      </div>
         </form>
         </div>
     
