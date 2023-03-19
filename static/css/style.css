@@ -32,7 +32,8 @@ p {
 
 .navbar a {
     color: #e3dfda;
-    font-family: Heebo, sans-serif;
+    font-family: "Old Standard TT", sans-serif;
+    font-size: 20px;
 }
 
 .logo {
@@ -66,6 +67,14 @@ p {
 
 #prices_hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679058949/prices_4_ufma0s.jpg");
+}
+
+#booking-one-hero {
+    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679241258/booking1_f8egew.jpg");
+}
+
+#booking-sucess-hero {
+    background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679241960/booking.success_ud36jn.jpg");
 }
 
 .main-block {

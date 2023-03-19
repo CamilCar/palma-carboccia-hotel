@@ -1,5 +1,17 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
+{% block hero_img %}
+<div id="booking-one-hero" class="images">
+  {% include "navbar.html" %}
+  
+</div>
+{% endblock %}
 
+{% block textsection %}
+    <div class="main_section">
+        <div class="row">
+            <div class="main-block">
+                <div>
+ 
 {% load i18n %}
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
@@ -18,4 +30,8 @@
 </form>
 
 
+{% endblock %}
+</div>
+</div>
+</div>
 {% endblock %}
