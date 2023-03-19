@@ -4,9 +4,8 @@ from datetime import datetime
 
 from .forms import BookingForm, ConfirmBookingForm
 
-# Create your views here.
 
-
+@login_required
 def booking_page(request):
     if request.method == "POST":
         booking_form = BookingForm(request.POST)
@@ -41,7 +40,9 @@ def booking_page(request):
 
 @login_required
 def new_booking(request):
-    render(request, 'booking/booking_successful.html')
+    # post the form to the database
+
+    return render(request, 'booking/booking_successful.html')
 
 
 def calculate_price(amount_of_adults: int, amount_of_children: int, amount_of_nights: int):
