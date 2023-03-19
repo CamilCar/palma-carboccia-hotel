@@ -29,4 +29,3 @@ class ConfirmBookingForm(BookingForm):
     total_price = forms.IntegerField()
     first_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'First name*', 'class': 'form-control col-xs-3'}))
     last_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Last name*', 'class': 'form-control col-xs-3'}))
-    special_request = forms.Textarea()

@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from datetime import datetime
 
 from .forms import BookingForm, ConfirmBookingForm
+from .models import Booking
 
 
 @login_required
@@ -41,6 +42,12 @@ def booking_page(request):
 @login_required
 def new_booking(request):
     # post the form to the database
+    booking = Booking(request.POST)
+    print(booking)
+
+    # booking = form.save(commit=False)
+    booking.created_by = request.user
+    booking.save()
 
     return render(request, 'booking/booking_successful.html')
 
@@ -51,3 +58,7 @@ def calculate_price(amount_of_adults: int, amount_of_children: int, amount_of_ni
     price_per_child = 25
 
     return (initial_price + (amount_of_adults * price_per_adult) + (amount_of_children * price_per_child)) * amount_of_nights
+
+
+def my_reservations(request):
+    return render(request, 'booking/my_reservations.html')
