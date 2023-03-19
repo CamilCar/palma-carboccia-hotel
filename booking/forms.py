@@ -21,8 +21,8 @@ class EndDateInput(forms.DateInput):
 class BookingForm(forms.Form):
     start_date = forms.DateField(widget=StartDateInput)
     end_date = forms.DateField(widget=EndDateInput)
-    amount_adults = forms.IntegerField(min_value=1, initial=1)
-    amount_kids = forms.IntegerField(required=False)
+    amount_adults = forms.IntegerField(min_value=1, max_value=3, initial=1)
+    amount_kids = forms.IntegerField(required=False, min_value=0, max_value=3)
 
 
 class ConfirmBookingForm(BookingForm):
