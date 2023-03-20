@@ -1,12 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Heebo&family=Old+Standard+TT:ital@1&display=swap');
 
-
-.h-100 {
-    color: #e3dfda;
-    font-family: 'Heebo', sans-serif;
-    font-weight: 400;
-}
 
 .main_hero_section {
     
@@ -30,15 +23,34 @@ p {
     margin-right: 5%;
 }
 
+h3 {
+    font-family: "Old Standard TT", serif;
+}
+h5 {
+    margin-top: 10px;
+}
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3vw;
+}
+
+#title {
+    font-family: 'Heebo', sans-serif;
+}
+
+ul {
+    display: inline;
+}
 .navbar a {
     color: #e3dfda;
     font-family: "Old Standard TT", sans-serif;
     font-size: 20px;
 }
 
-.logo {
-    width: 100px;
-    height: 80px;
+#line {
+    height: 1px;
+    background: black;
+    margin: 20px 0;
 }
 
 .images {
@@ -48,7 +60,6 @@ p {
     background-position: center;
     float: right;
 }
-
 
 #landing_hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678449406/hero_1_mphfa4.jpg");
@@ -70,7 +81,7 @@ p {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679058949/prices_4_ufma0s.jpg");
 }
 
-#booking-one-hero {
+#booking-hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679241258/booking1_f8egew.jpg");
 }
 
@@ -83,9 +94,17 @@ p {
     margin-top: -4rem;
     width: 50%;
     border-radius: 0.25rem;
+    padding: 3.7rem 3rem 0;
 
 }
 
+.main-intro {
+    height: 300px;
+    margin-top: 0;
+    width: 50%;
+    border-radius: 0.25rem;
+    padding: 3.7rem 3rem 0;
+}
 body,
 .main-block {
 
@@ -100,9 +119,6 @@ body {
     padding-left: 10%;
 }
 
-.main-block {
-    padding: 3.7rem 3rem 0;
-}
 
 #date-picker-wrapper {
     display: flex;
@@ -112,6 +128,14 @@ body {
 #submit-btn {
     text-align: center;
     margin-top: 20px;
+}
+#page-title {
+    color: #e3dfda;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+    padding-left: 40px;
+    padding-right: 50px;
+    top: 50%;
 }
 
 @media screen and (min-width: 900px) {
@@ -128,7 +152,10 @@ body {
     }
 
     .booking_button {
-        padding-left: 140px;
+        margin-left: 140px;
     }
 }
+
+
+
 
