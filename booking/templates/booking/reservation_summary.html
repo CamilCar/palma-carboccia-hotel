@@ -2,7 +2,7 @@
 
 
 {% block hero_img %}
-<div id="booking-one-hero" class="images">
+<div id="booking-hero" class="images">
   {% include "navbar.html" %}
   
 </div>
@@ -19,16 +19,19 @@
             {% csrf_token %}
           <div class="row">
             <div class="col">
-              <input type="text" class="form-control" value="{{booking_form.start_date.value}} - {{booking_form.end_date.value}}" disabled>
+              {{ booking_form.start_date }}
             </div>
             <div class="col">
-              <input type="text" class="form-control" value="{{booking_form.amount_adults.value}} adults" disabled>
+              {{ booking_form.end_date }}
             </div>
             <div class="col">
-              <input type="text" class="form-control" value="{{booking_form.amount_kids.value}} children" disabled>
+              {{ booking_form.amount_adults }}
             </div>
             <div class="col">
-              <input type="text" class="form-control" value="€{{booking_form.total_price.value}}" disabled>
+              {{ booking_form.amount_kids }}
+            </div>
+            <div class="col">
+              {{ booking_form.total_price }}
             </div>
           </div>
           <div class="form-group row mt-4">

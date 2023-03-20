@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from datetime import datetime
+from django.http import HttpResponseNotFound
 
 from .forms import BookingForm, ConfirmBookingForm
 from .models import Booking
@@ -42,14 +43,18 @@ def booking_page(request):
 @login_required
 def new_booking(request):
     # post the form to the database
-    booking = Booking(request.POST)
-    print(booking)
 
-    # booking = form.save(commit=False)
-    booking.created_by = request.user
-    booking.save()
+    form = ConfirmBookingForm(request.POST)
 
-    return render(request, 'booking/booking_successful.html')
+    if form.is_valid():
+        new_booking = form.save(commit=False)
+        new_booking.created_by = request.user
+        new_booking.save()
+
+        return render(request, 'booking/booking_successful.html')
+
+    else:
+        return HttpResponseNotFound('Oops something went wrong')
 
 
 def calculate_price(amount_of_adults: int, amount_of_children: int, amount_of_nights: int):
