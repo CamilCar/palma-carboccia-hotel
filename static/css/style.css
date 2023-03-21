@@ -88,23 +88,23 @@ ul {
     float: right;
 }
 
-#landing_hero {
+#landing-hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678449406/hero_1_mphfa4.jpg");
 }
 
-#the_hotel_hero {
+#the-hotel-hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1678919431/hotel2_fgjnwy.jpg");
 }
 
-#our_rooms_hero {
+#our-rooms-hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679056472/our.rooms_zomtbo.jpg");
 }
 
-#food_hero {
+#food-hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679057058/menu_zyilj3.jpg");
 }
 
-#prices_hero {
+#prices-hero {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679058949/prices_4_ufma0s.jpg");
 }
 

@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 
 
-
-
 {% block hero_img %}
-<div id="food_hero" class="images">
+<div id="food-hero" class="images">
   {% include "navbar.html" with render_light_navbar=True %}
   
 </div>
@@ -14,13 +12,15 @@
 <h1>
 Our restaurants and bars offer an array of local and international cuisines</h1>
 <h5>Open to everyone, not just hotel guests. Our menu can vary between seasons and restaurants.</h5>
+
 <div id="line"></div>
+
 <div class="container">
   <div class="group-header">
     <h5>
       Main Courses
     </h5>
-    <span> €</span>
+    <span> 32€</span>
   </div>
   
   <h3>
@@ -45,7 +45,7 @@ Our restaurants and bars offer an array of local and international cuisines</h1>
   <h5>
     Desserts
   </h5>
-  <span> €</span>
+  <span> 12€</span>
   
   <h3>
     <span>Fruit And Cream </span>
@@ -55,10 +55,5 @@ Our restaurants and bars offer an array of local and international cuisines</h1>
     <span>Chocolate Cake With Ice Cream</span>
   </h3>
   <p>Our very own Fudgy Chocolate Cake, with powdered sugar and scoops of ice cream</p>
-</div>
-
-
-</div>
-</div>
 </div>
 {% endblock %}

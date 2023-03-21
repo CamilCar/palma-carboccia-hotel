@@ -9,44 +9,42 @@
 {% endblock %}
 
 
-
 {% block textsection %}
+{% comment %} Reservation summary page before user confirms booking {% endcomment %}
 <div>
-    
-        <div class="container-md">
-          <h2>Reservation summary</h2>
-          <form method="post" action="{% url 'create-booking' %}">
-            {% csrf_token %}
-          <div class="row">
-            <div class="col">
-              {{ booking_form.start_date }}
-            </div>
-            <div class="col">
-              {{ booking_form.end_date }}
-            </div>
-            <div class="col">
-              {{ booking_form.amount_adults }}
-            </div>
-            <div class="col">
-              {{ booking_form.amount_kids }}
-            </div>
-            <div class="col">
-              {{ booking_form.total_price }}
-            </div>
+  <div class="container-md">
+    <h2>Reservation summary</h2>
+      <form method="post" action="{% url 'create-booking' %}">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col">
+            {{ booking_form.start_date }}
           </div>
-          <div class="form-group row mt-4">
-            <div class="col">
-              {{ booking_form.first_name }}
-            </div>
-            <div class="col">
-              {{ booking_form.last_name }}
-            </div>
+          <div class="col">
+            {{ booking_form.end_date }}
           </div>
-          <div id="submit-btn">
-        <input class="btn btn-success btn-lg " type="submit" value="Confirm">
+          <div class="col">
+            {{ booking_form.amount_adults }}
+          </div>
+          <div class="col">
+            {{ booking_form.amount_kids }}
+          </div>
+          <div class="col">
+            {{ booking_form.total_price }}
+          </div>
+          </div>
+        <div class="form-group row mt-4">
+          <div class="col">
+            {{ booking_form.first_name }}
+          </div>
+          <div class="col">
+            {{ booking_form.last_name }}
+          </div>
         </div>
-        </form>
+        <div id="submit-btn">
+          <input class="btn btn-success btn-lg " type="submit" value="Confirm">
         </div>
-    
+      </form>
+  </div>
 </div>
 {% endblock %}

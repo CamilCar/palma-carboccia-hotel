@@ -2,15 +2,11 @@
 
 
 {% block hero_img %}
-<div id="landing_hero" class="images">
+<div id="landing-hero" class="images">
   {% include "navbar.html" with render_light_navbar=True %}
-
 </div>
-<div class="main_section">
-  <div>
-  
-  </div>
-  {% endblock %}
+
+{% endblock %}
 
 {% block textsection %}
 <div  class="align-items-center ">
@@ -24,6 +20,7 @@
     The nearest island to the Great Barrier Reef, Hayman Island is ideal for nature based activities and exceptional guest experiences. 
   </p>
 </div>
+{% comment %} Removes the grey-box style on index page {% endcomment %}
 <style>
   .main-block {margin-top: 0;}
 </style>

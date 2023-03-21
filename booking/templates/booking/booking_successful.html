@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-
+{% comment %} Sends user to this page after summary is confirmed {% endcomment %}
 {% block hero_img %}
 <div id="booking-sucess-hero" class="images">
   {% include "navbar.html" %}
@@ -10,11 +10,8 @@
 
 {% block textsection %}
   <div class="main_section">
-        <div class="row">
-            <div class="main-block">
-              <h3>Thank you for your booking!</h3>
-           </div>
-        </div>
+    <div class="row">
+      <h3>Thank you for your booking with us!</h3>
     </div>
   </div>
-    {% endblock %}
+{% endblock %}

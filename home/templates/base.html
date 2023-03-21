@@ -23,38 +23,29 @@
         
         
     {% block hero_img %}
-    
-
     {% endblock %}
 
-   
+   {% comment %} Creates a general text block across all pages {% endcomment %}
     {% block intro %}
-    <div class="main_section">
+    <div class="main-section">
         <div class="row">
             <div class="main-block">
                 {% block textsection %}
-
                 <h1></h1>
                 <p></p>
                 {% endblock %}
             </div>
         </div>
-        
     </div>
-    
     {% endblock %}
     
+    {% block carusel %}
     
-    
-    
-    
-{% block carusel %}
-    
-{% endblock %}
+    {% endblock %}
 
 
-{% block footer %}
-<footer class="bg-dark text-center text-white">
+    {% block footer %}
+    <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
       <!-- Section: Social media -->
@@ -89,7 +80,6 @@
           ><i class="fab fa-github"></i
         ></a>
       </section>
-   
     </div>
 
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -111,5 +101,4 @@
     {% endblock %}
 
 </body>
-
 </html>
