@@ -32,17 +32,17 @@
                     <button type="button" class="btn btn-secondary">Book Now</button>
                 </a>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                         Signed In
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{% url 'my_reservations' %}">My Reservations</a></li>
+                        <li><a class="dropdown-item text-dark" href="{% url 'my_reservations' %}">My Reservations</a></li>
                         
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                        <li><a class="dropdown-item text-dark" href="{% url 'account_logout' %}">Logout</a></li>
                     </ul>
                 </li>
                 {% else %}

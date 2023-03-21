@@ -12,4 +12,30 @@
 
 <h1>My reservations</h1>
 
+{% if reservations %}
+
+<table class="table mt-4 mb-4">
+  <tbody>
+    {% for reservation in reservations %}
+    <tr>
+      <td>{{ reservation.first_name }} {{ reservation.last_name }}</td>
+      <td>{{ reservation.start_date }} - {{ reservation.end_date }}</td>
+      <td>{{ reservation.amount_adults }} adults</td>
+      <td>{{ reservation.amount_kids }} children</td>
+      <td>€{{ reservation.total_price }}</td>
+      <td><a class="btn btn-primary" href="{% url 'edit_reservation' reservation.id %}" role="button">Edit</a></td>
+      <td><a class="btn btn-danger" href="{% url 'delete_reservation' reservation.id %}" role="button">Remove</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% else %}
+
+<p class="mt-4 mb-4">You have not made any reservations yet.</p>
+<p>Go to the booking page to page a reservation</p>
+<a class="btn btn-primary" href="{% url 'book_a_room' %}" role="button">Make a booking</a>
+{% endif %}
+
+
 {% endblock %}

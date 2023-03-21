@@ -1,9 +1,10 @@
 from django import forms
+from django.core.exceptions import ValidationError
 import datetime
-
 from .models import Booking
 
 
+# Creates date imput for initial booking
 class StartDateInput(forms.DateInput):
     input_type = 'date'
 
@@ -20,16 +21,29 @@ class EndDateInput(forms.DateInput):
         self.attrs.setdefault('min', datetime.date.today() + datetime.timedelta(days=2))
 
 
+# Form for initial booking
 class BookingForm(forms.Form):
     start_date = forms.DateField(widget=StartDateInput)
     end_date = forms.DateField(widget=EndDateInput)
     amount_adults = forms.IntegerField(min_value=1, max_value=3, initial=1)
     amount_kids = forms.IntegerField(required=False, min_value=0, max_value=3)
+    
+    # Prevents user from sending in wrong date order
+    def clean(self):
+        cleaned_data = super().clean()
+        start_date = cleaned_data.get('start_date')
+        end_date = cleaned_data.get('end_date')
+
+        if end_date <= start_date:
+            raise ValidationError("The end date has to be later than the start date")
+
+        return cleaned_data
 
 
 READ_ONLY_FIELD = {'readonly': True, 'class': 'form-control'}
 
 
+# Step two of booking form, where input is only first+last name
 class ConfirmBookingForm(forms.ModelForm):
 
     class Meta:
@@ -47,6 +61,7 @@ class ConfirmBookingForm(forms.ModelForm):
         self.fields['total_price'].widget.attrs.update(READ_ONLY_FIELD)
 
 
+# Form for edit reservation
 class EditBookingForm(forms.ModelForm):
 
     class Meta:

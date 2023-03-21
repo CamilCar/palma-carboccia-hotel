@@ -31,7 +31,12 @@
             {{booking_form.amount_kids}}
         </div>
       </div>
+      {% if end_date_error %}
+      <div class="alert alert-danger" role="alert">
+        {{end_date_error}}
+      </div>
+      {% endif %}
     <input type="submit" id="book-btn" class="btn btn-success" value="Next">
   </form>
-    
-    {% endblock %}
+  {% endblock %}
+  

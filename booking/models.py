@@ -3,6 +3,12 @@ from django.db import models
 
 
 class Booking(models.Model):
+    """
+    Set up the bookings table in db
+    with all the required fields, such
+    as dates, adults and kids. Checks
+    if its the right data type.
+    """
     start_date = models.DateField()
     end_date = models.DateField()
     amount_adults = models.IntegerField()
