@@ -5,26 +5,28 @@
     
     font-family: "Old Standard TT", serif;
     font-size: 22.5px;
-    font-style: normal;
     font-weight: 400;
     letter-spacing: 0.54px;
     line-height: 24.75px;
-    text-transform: none;
     color: #2A2A2A;
-    margin: 3%;
+    
 }
 
 p {
     font-family: Heebo, sans-serif;
     font-style: normal;
     font-weight: 300;
-    text-transform: none;
+    font-size: 1vw;
     color: #606060;
     margin-right: 5%;
 }
 
+h6 {
+    margin-top: 8px;
+}
 h3 {
     font-family: "Old Standard TT", serif;
+    font-size: 2vw;
 }
 h5 {
     margin-top: 10px;
@@ -34,6 +36,9 @@ h1 {
     font-size: 3vw;
 }
 
+h2 {
+    font-size: 2vw;
+}
 #title {
     font-family: 'Heebo', sans-serif;
 }
@@ -89,12 +94,26 @@ ul {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679241960/booking.success_ud36jn.jpg");
 }
 
+.intro-text {
+    margin: 0 10%;
+
+}
+
+.carousel {
+    width: 75%;
+    margin: auto;
+}
+
+#main-title {
+    font-family: 'Heebo', sans-serif;
+}
+
 .main-block {
-    height: 300px;
+    
     margin-top: -4rem;
     width: 50%;
     border-radius: 0.25rem;
-    padding: 3.7rem 3rem 0;
+    padding: 1.7rem 3rem 2rem;
 
 }
 
@@ -111,19 +130,27 @@ body,
     background: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679059910/noisy_y7bmb5.png"), #e3dfda;
 }
 
-body {
-    margin: 0;
-  }
 
 .row {
     padding-left: 10%;
+    
 }
 
+form {
+    text-align: center;
+}
 
 #date-picker-wrapper {
     display: flex;
     justify-content: space-around;
 }
+
+#guest-nr-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin: 10%;
+}
+
 
 #submit-btn {
     text-align: center;
@@ -135,8 +162,14 @@ body {
     font-weight: 400;
     padding-left: 40px;
     padding-right: 50px;
-    top: 50%;
+    top: 60%;
 }
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
 
 @media screen and (min-width: 900px) {
     .navbar {
@@ -155,7 +188,5 @@ body {
         margin-left: 140px;
     }
 }
-
-
 
 

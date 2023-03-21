@@ -25,11 +25,17 @@
                     {{booking_form.end_date}}
                   </div>
                 </div>
+                <div id="guest-nr-wrapper">
+                  <div id="adult-nr-wrapper">
                 <p>Adults:</p>
                 {{booking_form.amount_adults}}
+              </div>
+              <div id="kids-nr-wrapper">
                 <p>Children:</p>
                 {{booking_form.amount_kids}}
-                <input type="submit" value="Next">
+              </div>
+            </div>
+            <input type="submit" id="book-btn" class="btn btn-success" value="Next">
               </form>
     
     {% endblock %}
