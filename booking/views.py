@@ -1,9 +1,9 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from datetime import datetime
 from django.http import HttpResponseNotFound
 
-from .forms import BookingForm, ConfirmBookingForm
+from .forms import BookingForm, ConfirmBookingForm, EditBookingForm
 from .models import Booking
 
 
@@ -66,4 +66,37 @@ def calculate_price(amount_of_adults: int, amount_of_children: int, amount_of_ni
 
 
 def my_reservations(request):
-    return render(request, 'booking/my_reservations.html')
+    reservations = Booking.objects.filter(created_by=request.user)
+
+    return render(request, 'booking/my_reservations.html', {
+        'reservations': reservations
+    })
+
+@login_required
+def delete_reservation(request, pk):
+    reservation = get_object_or_404(Booking, pk=pk, created_by=request.user)
+    reservation.delete()
+
+    return redirect("my_reservations")
+
+
+
+@login_required
+def edit_reservation(request, pk):
+    reservation = get_object_or_404(Booking, pk=pk, created_by=request.user)
+
+    print(request.method)
+
+    if request.method == 'POST':
+        form = EditBookingForm(request.POST, instance=reservation)
+
+        if form.is_valid():
+            
+            form.save()
+            return redirect('my_reservations')
+    else:
+        booking_form = EditBookingForm(instance=reservation)
+
+        return render(request, 'booking/edit_reservation.html', {
+            'reservation': booking_form
+        })

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home.views import landing_page, history_page, rooms_page, food_page, price_page
-from booking.views import booking_page, new_booking, my_reservations
+from booking.views import booking_page, new_booking, my_reservations, delete_reservation, edit_reservation
 
 
 urlpatterns = [
@@ -30,5 +30,7 @@ urlpatterns = [
     path('booking/', booking_page, name='book_a_room'),
     path('create-booking/', new_booking, name='create-booking'),
     path('my_reservations/', my_reservations, name='my_reservations'),
+    path('<int:pk>/delete_reservation', delete_reservation, name='delete_reservation'),
+    path('<int:pk>/edit_reservation', edit_reservation, name='edit_reservation'),
     path('accounts/', include('allauth.urls')),
     ]

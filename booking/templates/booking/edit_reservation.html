@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block hero_img %}
+<div id="booking-hero" class="images">
+  {% include "navbar.html" %}
+  
+</div>
+{% endblock %}
+
+
+
+
+{% block textsection %}
+  
+              <h1>Edit Reservation</h1>
+              <form method="post">
+                {% csrf_token %}
+               {{reservation}}
+               <input class="btn btn-success btn-lg " type="submit" value="Confirm">
+              </form>
+ 
+    {% endblock %}

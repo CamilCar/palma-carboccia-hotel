@@ -45,3 +45,30 @@ class ConfirmBookingForm(forms.ModelForm):
         self.fields['first_name'].widget.attrs.update({'placeholder': 'First name*', 'class': 'form-control col-xs-3'})
         self.fields['last_name'].widget.attrs.update({'placeholder': 'Last name*', 'class': 'form-control col-xs-3'})
         self.fields['total_price'].widget.attrs.update(READ_ONLY_FIELD)
+
+
+class EditBookingForm(forms.ModelForm):
+
+    class Meta:
+        model = Booking
+        fields = ('start_date', 'end_date', 'amount_adults', 'amount_kids', 'first_name', 'last_name')
+        widgets = {
+            'start_date': forms.DateInput(attrs={
+                'min': datetime.date.today() + datetime.timedelta(days=1),
+                'type': 'date'
+            }),
+            'end_date': forms.DateInput(attrs={
+                'min': datetime.date.today() + datetime.timedelta(days=2),
+                'type': 'date'
+            }),
+            'amount_adults': forms.NumberInput(attrs={
+                'min': 1,
+                'max': 3
+            }),
+            'amount_kids': forms.NumberInput(attrs={
+                'min': 0,
+                'max': 3,
+                'required': False
+            })
+
+        }

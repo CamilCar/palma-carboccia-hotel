@@ -17,17 +17,17 @@
                 {% csrf_token %}
                 <div id="date-picker-wrapper">
                   <div id="end-date-wrapper">
-                    <p>start date:</p>
+                    <p>Check-in:</p>
                     {{booking_form.start_date}}
                   </div>
                   <div id="end-date-wrapper">
-                    <p>end date:</p>
+                    <p>Check-out:</p>
                     {{booking_form.end_date}}
                   </div>
                 </div>
                 <p>Adults:</p>
                 {{booking_form.amount_adults}}
-                <p>Kids:</p>
+                <p>Children:</p>
                 {{booking_form.amount_kids}}
                 <input type="submit" value="Next">
               </form>
