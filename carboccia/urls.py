@@ -22,7 +22,6 @@ from booking.views import booking_page, new_booking, my_reservations, delete_res
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', landing_page, name='home'),
-    path('landing_page/', landing_page, name='home'),
     path('the_hotel/', history_page, name='the_hotel'),
     path('our_rooms/', rooms_page, name='our_rooms'),
     path('food_drink/', food_page, name='food_drink'),
