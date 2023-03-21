@@ -16,12 +16,13 @@
               <form method="post" action=".">
                 {% csrf_token %}
                 <div id="date-picker-wrapper">
+                  
                   <div id="end-date-wrapper">
                     <p >Check-in:<i class="fa-solid fa-plane-arrival"></i></p>
                     {{booking_form.start_date}}
                   </div>
                   <div id="end-date-wrapper">
-                    <p>Check-out:</p>
+                    <p >Check-out:<i class="fa-sharp fa-solid fa-plane-departure fa-flip-horizontal"></i></p>
                     {{booking_form.end_date}}
                   </div>
                 </div>

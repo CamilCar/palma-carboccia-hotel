@@ -1,22 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Heebo&family=Old+Standard+TT:ital@1&display=swap');
 
+/* The styling of the square block that holds the texts */
 
-.main_hero_section {
-    
-    font-family: "Old Standard TT", serif;
-    font-size: 22.5px;
-    font-weight: 400;
-    letter-spacing: 0.54px;
-    line-height: 24.75px;
-    color: #2A2A2A;
-    
+.main-block {
+
+    margin-top: -4rem;
+    width: 50%;
+    border-radius: 0.25rem;
+    padding: 1.7rem 3rem 2rem;
+
 }
+
+body,
+.main-block {
+
+    background: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679059910/noisy_y7bmb5.png"), #e3dfda;
+}
+
+
+.row {
+    padding-left: 10%;
+
+}
+
+/* Text elements styling */
 
 p {
     font-family: Heebo, sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 1vw;
+
     color: #606060;
     margin-right: 5%;
 }
@@ -24,21 +37,21 @@ p {
 h6 {
     margin-top: 8px;
 }
+
 h3 {
     font-family: "Old Standard TT", serif;
-    font-size: 2vw;
+
 }
+
 h5 {
     margin-top: 10px;
 }
+
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3vw;
+
 }
 
-h2 {
-    font-size: 2vw;
-}
 #title {
     font-family: 'Heebo', sans-serif;
 }
@@ -46,17 +59,26 @@ h2 {
 ul {
     display: inline;
 }
-.navbar a {
-    color: #e3dfda;
-    font-family: "Old Standard TT", sans-serif;
-    font-size: 20px;
-}
 
 #line {
     height: 1px;
     background: black;
     margin: 20px 0;
 }
+
+/* Navbar styling */
+
+.navbar a {
+    color: #e3dfda;
+    font-family: "Old Standard TT", sans-serif;
+    font-size: 20px;
+}
+
+.navbar-collapse {
+    text-align: right;
+}
+
+/* Hero images and rules */
 
 .images {
     width: 100%;
@@ -94,47 +116,12 @@ ul {
     background-image: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679241960/booking.success_ud36jn.jpg");
 }
 
-.intro-text {
-    margin: 0 10%;
-
-}
-
 .carousel {
     width: 75%;
     margin: auto;
 }
 
-#main-title {
-    font-family: 'Heebo', sans-serif;
-}
-
-.main-block {
-    
-    margin-top: -4rem;
-    width: 50%;
-    border-radius: 0.25rem;
-    padding: 1.7rem 3rem 2rem;
-
-}
-
-.main-intro {
-    height: 300px;
-    margin-top: 0;
-    width: 50%;
-    border-radius: 0.25rem;
-    padding: 3.7rem 3rem 0;
-}
-body,
-.main-block {
-
-    background: url("https://res.cloudinary.com/darav9s8b/image/upload/v1679059910/noisy_y7bmb5.png"), #e3dfda;
-}
-
-
-.row {
-    padding-left: 10%;
-    
-}
+/* Booking form  */
 
 form {
     text-align: center;
@@ -151,25 +138,13 @@ form {
     margin: 10%;
 }
 
-
 #submit-btn {
     text-align: center;
     margin-top: 20px;
 }
-#page-title {
-    color: #e3dfda;
-    font-family: 'Heebo', sans-serif;
-    font-weight: 400;
-    padding-left: 40px;
-    padding-right: 50px;
-    top: 60%;
-}
-html {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
- }
- 
+
+
+/* Media Queries  */
 
 @media screen and (min-width: 900px) {
     .navbar {
@@ -189,4 +164,13 @@ html {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .main-block {
 
+        margin-top: -4rem;
+        width: 90%;
+        border-radius: 0.25rem;
+        padding: 1.7rem 3rem 2rem;
+
+    }
+}
