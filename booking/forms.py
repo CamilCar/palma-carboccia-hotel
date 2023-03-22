@@ -27,7 +27,7 @@ class BookingForm(forms.Form):
     end_date = forms.DateField(widget=EndDateInput)
     amount_adults = forms.IntegerField(min_value=1, max_value=3, initial=1)
     amount_kids = forms.IntegerField(required=False, min_value=0, max_value=3)
-    
+
     # Prevents user from sending in wrong date order
     def clean(self):
         cleaned_data = super().clean()

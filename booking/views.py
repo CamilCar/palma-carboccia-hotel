@@ -6,7 +6,8 @@ from django.http import HttpResponseNotFound
 from .forms import BookingForm, ConfirmBookingForm, EditBookingForm
 from .models import Booking
 
-# This is where the first step of booking is handled 
+
+# This is where the first step of booking is handled
 @login_required
 def booking_page(request):
     if request.method == "POST":
@@ -18,7 +19,7 @@ def booking_page(request):
             amount_of_children = int(request.POST.get('amount_kids') or "0")
             start_date = request.POST.get('start_date')
             end_date = request.POST.get('end_date')
-            
+
             amount_of_nights = (datetime.strptime(end_date, "%Y-%m-%d") - datetime.strptime(start_date, "%Y-%m-%d")).days
 
             confirm_booking_dict = {
@@ -48,6 +49,7 @@ def booking_page(request):
             "booking_form": booking_form
         })
 
+
 # Saves the new booking to db
 @login_required
 def new_booking(request):
@@ -67,10 +69,12 @@ def new_booking(request):
 
         return redirect('booking_successful')
 
+
 # Renders booking_successful
 @login_required
 def booking_successful(request):
     return render(request, 'booking/booking_successful.html')
+
 
 # Shows user reservations
 def my_reservations(request):
@@ -80,6 +84,7 @@ def my_reservations(request):
         'reservations': reservations
     })
 
+
 # Let user delete reservation
 @login_required
 def delete_reservation(request, pk):
@@ -87,6 +92,7 @@ def delete_reservation(request, pk):
     reservation.delete()
 
     return redirect("my_reservations")
+
 
 # Let user edit reservation
 @login_required
@@ -112,7 +118,8 @@ def edit_reservation(request, pk):
             'reservation': booking_form
         })
 
-# Calculates the price 
+
+# Calculates the price
 def calculate_price(amount_of_adults: int, amount_of_children: int, amount_of_nights: int):
     initial_price = 50
     price_per_adult = 50
