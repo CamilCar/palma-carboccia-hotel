@@ -102,8 +102,12 @@ This website is for everyone that is tired of the dark, cold winter months, and 
 - Bootstrap
 - Fontawesome
 
-    ## Testing 
-    ------------
+## Database model
+
+![Database model](/media/datamodel.jpg) 
+
+## Testing 
+--------------------
 - I have done no automated tests as I ran into a technical problem late in my time schedule. Image below. I had no time left to investigate this further.
 ![Home concept](/media/failautotests.jpg)
 - I have done manual testing for all pages
